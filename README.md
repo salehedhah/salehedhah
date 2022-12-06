@@ -29,6 +29,7 @@
 
 ## About Me:
 - I am a Fullstack JavaScript Web Developer.
+- I am holding a Bachelor's degree in Computer Application (BCA).
 
 ## Skills:
 
