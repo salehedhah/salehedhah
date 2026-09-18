@@ -3,6 +3,7 @@ import { Background } from "./components/Background";
 import { VideoCard } from "./components/VideoCard";
 import { Caption } from "./components/Caption";
 import { KaratBadge } from "./components/KaratBadge";
+import { GoldFrame } from "./components/GoldFrame";
 
 type Beat = {
   from: number;
@@ -58,6 +59,7 @@ export const GoldKaratsVideo: React.FC = () => {
           )}
         </Sequence>
       ))}
+      <GoldFrame />
     </>
   );
 };

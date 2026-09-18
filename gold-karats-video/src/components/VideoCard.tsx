@@ -1,17 +1,18 @@
 import React from "react";
 import { Easing, interpolate, staticFile, useCurrentFrame } from "remotion";
 import { Video } from "@remotion/media";
+import { theme } from "../theme";
 
 export const VideoCard: React.FC = () => {
   const frame = useCurrentFrame();
 
-  const enter = interpolate(frame, [0, 20], [0, 1], {
+  const enter = interpolate(frame, [0, 28], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: Easing.bezier(0.16, 1, 0.3, 1),
   });
 
-  const scale = interpolate(enter, [0, 1], [0.9, 1], {
+  const scale = interpolate(enter, [0, 1], [0.92, 1], {
     output: "perceptual-scale",
   });
 
@@ -23,18 +24,31 @@ export const VideoCard: React.FC = () => {
         left: 40,
         right: 40,
         bottom: 90,
-        borderRadius: 36,
-        overflow: "hidden",
-        boxShadow: "0 40px 70px rgba(42, 33, 25, 0.35)",
+        borderRadius: 30,
+        padding: 8,
+        background: theme.goldGradient,
         opacity: enter,
         scale,
-        translate: `0px ${(1 - enter) * 30}px`,
+        translate: `0px ${(1 - enter) * 34}px`,
+        boxShadow: `0 46px 80px rgba(0, 0, 0, 0.55), 0 0 60px ${theme.glow}`,
       }}
     >
-      <Video
-        src={staticFile("gold-source.mp4")}
-        style={{ width: "100%", height: "100%", objectFit: "cover" }}
-      />
+      <div
+        style={{
+          position: "relative",
+          width: "100%",
+          height: "100%",
+          borderRadius: 24,
+          overflow: "hidden",
+          border: `1px solid ${theme.cardBorderInner}`,
+          backgroundColor: theme.backgroundCard,
+        }}
+      >
+        <Video
+          src={staticFile("gold-source.mp4")}
+          style={{ width: "100%", height: "100%", objectFit: "cover" }}
+        />
+      </div>
     </div>
   );
 };
