@@ -13,14 +13,16 @@ export const KaratBadge: React.FC<KaratBadgeProps> = ({
   durationInFrames,
 }) => {
   const frame = useCurrentFrame();
+  const target = Number(karat);
+
   const pop = interpolate(frame, [4, 22], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
-    easing: Easing.spring({ damping: 200 }),
+    easing: Easing.spring({ damping: 11 }),
     output: "perceptual-scale",
   });
 
-  const rotate = interpolate(frame, [4, 22], [-8, 0], {
+  const rotateIn = interpolate(frame, [4, 22], [-8, 0], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: Easing.bezier(0.16, 1, 0.3, 1),
@@ -33,6 +35,28 @@ export const KaratBadge: React.FC<KaratBadgeProps> = ({
     { extrapolateLeft: "clamp", extrapolateRight: "clamp" },
   );
 
+  const flare = interpolate(frame, [4, 34], [0.6, 2.4], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+    easing: Easing.out(Easing.cubic),
+  });
+  const flareOpacity = interpolate(frame, [4, 10, 34], [0, 0.8, 0], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+  });
+
+  const count = Math.round(
+    interpolate(frame, [4, 26], [0, target], {
+      extrapolateLeft: "clamp",
+      extrapolateRight: "clamp",
+      easing: Easing.out(Easing.cubic),
+    }),
+  );
+
+  const ringAngle = (frame * 4.5) % 360;
+  const orbitAngle = ((frame * 5) % 360) * (Math.PI / 180);
+  const orbitRadius = 86;
+
   return (
     <div
       style={{
@@ -43,16 +67,46 @@ export const KaratBadge: React.FC<KaratBadgeProps> = ({
         height: 156,
         borderRadius: "50%",
         scale: pop,
-        rotate: `${rotate}deg`,
+        rotate: `${rotateIn}deg`,
         opacity: pop * fadeOut,
       }}
     >
+      {/* Flare burst on entrance */}
+      <div
+        style={{
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          translate: "-50% -50%",
+          width: 156,
+          height: 156,
+          borderRadius: "50%",
+          scale: flare,
+          opacity: flareOpacity,
+          background: `radial-gradient(circle, ${theme.goldSoft} 0%, transparent 68%)`,
+        }}
+      />
+
+      {/* Orbiting sparkle */}
+      <div
+        style={{
+          position: "absolute",
+          top: 78 + Math.sin(orbitAngle) * orbitRadius,
+          left: 78 + Math.cos(orbitAngle) * orbitRadius,
+          width: 6,
+          height: 6,
+          borderRadius: "50%",
+          backgroundColor: theme.goldSoft,
+          boxShadow: `0 0 10px 2px ${theme.gold}`,
+        }}
+      />
+
       <div
         style={{
           position: "absolute",
           inset: 0,
           borderRadius: "50%",
-          background: theme.goldGradient,
+          backgroundImage: `conic-gradient(from ${ringAngle}deg, ${theme.goldDeep}, ${theme.goldSoft}, ${theme.gold}, #FFF3CC, ${theme.goldDeep})`,
           padding: 2,
           boxShadow: `0 20px 40px rgba(0,0,0,0.55), 0 0 30px ${theme.glow}`,
         }}
@@ -94,7 +148,7 @@ export const KaratBadge: React.FC<KaratBadgeProps> = ({
               color: "transparent",
             }}
           >
-            {karat}
+            {count}
           </div>
         </div>
       </div>

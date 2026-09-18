@@ -52,6 +52,19 @@ export const Caption: React.FC<CaptionProps> = ({
     easing: Easing.bezier(0.16, 1, 0.3, 1),
   });
 
+  const blurAmt = interpolate(frame, [0, fadeIn], [10, 0], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+    easing: Easing.bezier(0.16, 1, 0.3, 1),
+  });
+
+  const boldScale = interpolate(frame, [0, fadeIn], [0.78, 1], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+    easing: Easing.spring({ damping: 10 }),
+    output: "perceptual-scale",
+  });
+
   return (
     <div
       dir="rtl"
@@ -76,6 +89,7 @@ export const Caption: React.FC<CaptionProps> = ({
           letterSpacing: 1,
           color: theme.ivory,
           opacity: 0.85,
+          filter: `blur(${blurAmt}px)`,
         }}
       >
         {light}
@@ -100,7 +114,8 @@ export const Caption: React.FC<CaptionProps> = ({
           WebkitBackgroundClip: "text",
           backgroundClip: "text",
           color: "transparent",
-          filter: "drop-shadow(0 6px 18px rgba(0,0,0,0.45))",
+          scale: boldScale,
+          filter: `blur(${blurAmt}px) drop-shadow(0 6px 18px rgba(0,0,0,0.45))`,
         }}
       >
         {bold}

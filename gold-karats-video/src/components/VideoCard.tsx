@@ -16,6 +16,8 @@ export const VideoCard: React.FC = () => {
     output: "perceptual-scale",
   });
 
+  const borderAngle = (frame * 2.4) % 360;
+
   return (
     <div
       style={{
@@ -26,7 +28,7 @@ export const VideoCard: React.FC = () => {
         bottom: 90,
         borderRadius: 30,
         padding: 8,
-        background: theme.goldGradient,
+        backgroundImage: `conic-gradient(from ${borderAngle}deg, ${theme.goldDeep}, ${theme.goldSoft}, ${theme.gold}, #FFF3CC, ${theme.goldDeep})`,
         opacity: enter,
         scale,
         translate: `0px ${(1 - enter) * 34}px`,

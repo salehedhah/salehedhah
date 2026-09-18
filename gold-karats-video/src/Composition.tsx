@@ -4,6 +4,8 @@ import { VideoCard } from "./components/VideoCard";
 import { Caption } from "./components/Caption";
 import { KaratBadge } from "./components/KaratBadge";
 import { GoldFrame } from "./components/GoldFrame";
+import { Particles } from "./components/Particles";
+import { SparkleField } from "./components/SparkleField";
 
 type Beat = {
   from: number;
@@ -41,6 +43,8 @@ export const GoldKaratsVideo: React.FC = () => {
   return (
     <>
       <Background />
+      <Particles />
+      <SparkleField />
       <VideoCard />
       {beats.map((beat, i) => (
         <Sequence
