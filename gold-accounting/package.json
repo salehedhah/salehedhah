@@ -1,0 +1,22 @@
+{
+  "name": "gold-accounting",
+  "version": "1.0.0",
+  "description": "نظام محاسبي سحابي متكامل لمحلات الذهب - متوافق مع متطلبات هيئة الزكاة والضريبة والجمارك",
+  "main": "server/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "test": "node --test test/*.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "better-sqlite3": "^13.0.3",
+    "express": "^5.2.1",
+    "qrcode": "^1.5.4"
+  }
+}

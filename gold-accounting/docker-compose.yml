@@ -1,0 +1,13 @@
+services:
+  gold:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - SESSION_SECRET=change-me-to-a-long-random-string
+      - COOKIE_SECURE=1
+    volumes:
+      - gold-data:/data
+volumes:
+  gold-data:
