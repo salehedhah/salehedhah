@@ -1,0 +1,45 @@
+/* Vida — product catalogue.
+ * Edit this file to add / change products. Prices are in SAR.
+ * `old` is the price before discount (optional). */
+window.VIDA_CATEGORIES = [
+  { id: "rings", name: "خواتم", en: "Rings", cover: "ring-solitaire" },
+  { id: "necklaces", name: "قلائد", en: "Necklaces", cover: "necklace-drop" },
+  { id: "earrings", name: "أقراط", en: "Earrings", cover: "earrings-pearl" },
+  { id: "bracelets", name: "أساور", en: "Bracelets", cover: "bracelet-tennis" },
+  { id: "men", name: "رجالي", en: "Men", cover: "ring-aqeeq" },
+];
+
+window.VIDA_PRODUCTS = [
+  { id: "p01", img: "ring-solitaire", cat: "rings", name: "خاتم سوليتير لوميير", en: "Lumière Solitaire Ring", price: 389, old: 459, badge: "الأكثر مبيعاً", sizes: ["6", "7", "8", "9"], rating: 4.9, reviews: 214, isNew: false,
+    desc: "خاتم من الفضة الإيطالية عيار 925 بحجر زركون مقطوع بقطع البريليانت، مثبت بأربعة مخالب لإبراز لمعانه من كل الزوايا. مطلي بالروديوم لحماية تدوم ولا تتأكسد." },
+  { id: "p02", img: "ring-band", cat: "rings", name: "دبلة إيترنيتي", en: "Eternity Band", price: 249, sizes: ["6", "7", "8", "9", "10"], rating: 4.8, reviews: 96, isNew: true,
+    desc: "دبلة كلاسيكية بتشطيب مرآتي وحواف مزدوجة ناعمة، تصلح للارتداء اليومي أو كهدية خطوبة. فضة 925 مختومة." },
+  { id: "p03", img: "ring-aqeeq", cat: "men", name: "خاتم العقيق اليماني", en: "Yemeni Aqeeq Ring", price: 520, badge: "حصري", sizes: ["8", "9", "10", "11", "12"], rating: 5.0, reviews: 132, isNew: false,
+    desc: "حجر عقيق يماني طبيعي بلون الدم الغامق، في إطار فضي عريض مصنوع يدوياً. قطعة رجالية تحمل الأصالة بلمسة عصرية." },
+  { id: "p04", img: "ring-signet", cat: "men", name: "خاتم سيغنت الأزرق", en: "Royal Signet Ring", price: 479, old: 560, sizes: ["8", "9", "10", "11", "12"], rating: 4.7, reviews: 58, isNew: true,
+    desc: "خاتم رجالي بطابع ملكي، بحجر أزرق مستطيل بقطع الزمرد وكتف فضي عريض. فضة 925 مع إمكانية الحفر على الجانب." },
+  { id: "p05", img: "necklace-drop", cat: "necklaces", name: "قلادة قطرة الياقوت", en: "Sapphire Drop Necklace", price: 419, badge: "جديد", sizes: ["40 سم", "45 سم"], rating: 4.9, reviews: 77, isNew: true,
+    desc: "تعليقة على شكل قطرة بحجر أزرق ملكي، معلقة على سلسلة فضية رفيعة قابلة للتعديل. تناسب الإطلالات المسائية والمناسبات." },
+  { id: "p06", img: "necklace-crescent", cat: "necklaces", name: "قلادة الهلال", en: "Crescent Necklace", price: 299, old: 349, sizes: ["40 سم", "45 سم"], rating: 4.8, reviews: 189, isNew: false,
+    desc: "هلال فضي مصقول بنجمة زركون صغيرة — رمز البدايات الجديدة. هدية مثالية للمناسبات والأعياد." },
+  { id: "p07", img: "necklace-letter", cat: "necklaces", name: "قلادة الحرف المحفور", en: "Engraved Initial Necklace", price: 279, badge: "حفر مجاني", sizes: ["40 سم", "45 سم"], rating: 4.9, reviews: 305, isNew: false,
+    desc: "ميدالية دائرية يُحفر عليها حرف من اختيارك بالعربي أو الإنجليزي. حفر بالليزر بدقة عالية ومجاناً." },
+  { id: "p08", img: "earrings-pearl", cat: "earrings", name: "أقراط لؤلؤ أوبرا", en: "Opera Pearl Drops", price: 329, sizes: [], rating: 4.8, reviews: 91, isNew: false,
+    desc: "لؤلؤ مياه عذبة طبيعي بلمعان حريري، معلق بخطاف فضي وحجر زركون صغير. أناقة خالدة لا تبطل موضتها." },
+  { id: "p09", img: "earrings-emerald", cat: "earrings", name: "أقراط الزمرد الهندسية", en: "Emerald Geo Earrings", price: 359, old: 420, badge: "خصم", sizes: [], rating: 4.6, reviews: 44, isNew: true,
+    desc: "تصميم هندسي معاصر بحجر أخضر زمردي في قلب معين فضي. خفيفة الوزن ومريحة طوال اليوم." },
+  { id: "p10", img: "earrings-hoops", cat: "earrings", name: "حلق الطوق الكلاسيكي", en: "Classic Hoops", price: 199, sizes: ["صغير", "وسط", "كبير"], rating: 4.9, reviews: 402, isNew: false,
+    desc: "حلق دائري بسماكة متوسطة وتشطيب لامع، القطعة الأساسية في كل صندوق مجوهرات." },
+  { id: "p11", img: "earrings-studs", cat: "earrings", name: "أقراط زهرة الياسمين", en: "Jasmine Studs", price: 229, sizes: [], rating: 4.7, reviews: 120, isNew: true,
+    desc: "زهرة ياسمين بست بتلات فضية وزركون في كل بتلة ومركز لامع. ناعمة ومناسبة للاستخدام اليومي." },
+  { id: "p12", img: "bracelet-bangle", cat: "bracelets", name: "إسورة بانجل المرصعة", en: "Pavé Bangle", price: 449, sizes: ["S", "M", "L"], rating: 4.8, reviews: 66, isNew: false,
+    desc: "إسورة صلبة مرصعة بصف من أحجار الزركون على الواجهة الأمامية، بقفل مخفي آمن." },
+  { id: "p13", img: "bracelet-tennis", cat: "bracelets", name: "إسورة تنس الماسية", en: "Diamond Tennis Bracelet", price: 590, old: 690, badge: "الأكثر مبيعاً", sizes: ["16 سم", "17 سم", "18 سم"], rating: 5.0, reviews: 248, isNew: false,
+    desc: "صف متصل من أحجار الزركون عالية النقاء بقطع دائري، مع قفل مزدوج للأمان. بريق يشبه الألماس بلمسة فضية فاخرة." },
+  { id: "p14", img: "bracelet-chain", cat: "bracelets", name: "إسورة سلسلة كوبان", en: "Cuban Chain Bracelet", price: 269, sizes: ["17 سم", "19 سم", "21 سم"], rating: 4.7, reviews: 83, isNew: false,
+    desc: "سلسلة بحلقات متداخلة وقفل مستطيل، تصلح للرجال والنساء. فضة 925 ثقيلة الوزن." },
+  { id: "p15", img: "bracelet-cuff", cat: "bracelets", name: "إسورة الكف المنقوشة", en: "Arabesque Cuff", price: 399, badge: "صناعة يدوية", sizes: [], rating: 4.9, reviews: 39, isNew: true,
+    desc: "كف فضي عريض بنقوش أرابيسك محفورة يدوياً، مستوحى من الزخارف النجدية. قابل للتعديل ليناسب المعصم." },
+  { id: "p16", img: "anklet-bells", cat: "bracelets", name: "خلخال الأجراس", en: "Bells Anklet", price: 189, sizes: ["22 سم", "24 سم"], rating: 4.6, reviews: 71, isNew: false,
+    desc: "خلخال ناعم بأجراس فضية صغيرة تعطي صوتاً رقيقاً مع كل خطوة. لمسة تراثية بروح معاصرة." },
+];

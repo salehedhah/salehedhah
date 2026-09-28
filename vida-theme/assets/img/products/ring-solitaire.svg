@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+<defs>
+  <linearGradient id="silver" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#fbfcfd"/>
+    <stop offset=".22" stop-color="#c7ccd4"/>
+    <stop offset=".45" stop-color="#8a919c"/>
+    <stop offset=".62" stop-color="#eef1f4"/>
+    <stop offset=".8" stop-color="#a3a9b3"/>
+    <stop offset="1" stop-color="#e3e6ea"/>
+  </linearGradient>
+  <linearGradient id="silverV" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#ffffff"/>
+    <stop offset=".35" stop-color="#b9bfc8"/>
+    <stop offset=".55" stop-color="#7d8490"/>
+    <stop offset=".75" stop-color="#dfe3e8"/>
+    <stop offset="1" stop-color="#9aa1ab"/>
+  </linearGradient>
+  <linearGradient id="silverDark" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#6b727d"/>
+    <stop offset=".5" stop-color="#3d434c"/>
+    <stop offset="1" stop-color="#8b929c"/>
+  </linearGradient>
+  <radialGradient id="gem" cx=".38" cy=".32" r=".75">
+    <stop offset="0" stop-color="#ffffff"/>
+    <stop offset=".35" stop-color="#eaf3ff"/>
+    <stop offset=".7" stop-color="#b8c9dc"/>
+    <stop offset="1" stop-color="#7f93aa"/>
+  </radialGradient>
+  <radialGradient id="aqeeq" cx=".35" cy=".3" r=".8">
+    <stop offset="0" stop-color="#ffb199"/>
+    <stop offset=".25" stop-color="#c2412a"/>
+    <stop offset=".7" stop-color="#7a1a10"/>
+    <stop offset="1" stop-color="#3d0a05"/>
+  </radialGradient>
+  <radialGradient id="sapphire" cx=".35" cy=".3" r=".8">
+    <stop offset="0" stop-color="#c9dcff"/>
+    <stop offset=".3" stop-color="#3a64c8"/>
+    <stop offset=".75" stop-color="#16296b"/>
+    <stop offset="1" stop-color="#0a1233"/>
+  </radialGradient>
+  <radialGradient id="emerald" cx=".35" cy=".3" r=".8">
+    <stop offset="0" stop-color="#c8ffe6"/>
+    <stop offset=".3" stop-color="#1f9d6b"/>
+    <stop offset=".75" stop-color="#0b5138"/>
+    <stop offset="1" stop-color="#042419"/>
+  </radialGradient>
+  <radialGradient id="pearl" cx=".36" cy=".3" r=".78">
+    <stop offset="0" stop-color="#ffffff"/>
+    <stop offset=".45" stop-color="#f6f1ea"/>
+    <stop offset=".8" stop-color="#d9d2c8"/>
+    <stop offset="1" stop-color="#b5ada2"/>
+  </radialGradient>
+  <radialGradient id="bgLight" cx=".5" cy=".42" r=".75">
+    <stop offset="0" stop-color="#fbfaf8"/>
+    <stop offset=".6" stop-color="#eeece8"/>
+    <stop offset="1" stop-color="#dcd9d3"/>
+  </radialGradient>
+  <radialGradient id="bgDark" cx=".5" cy=".45" r=".8">
+    <stop offset="0" stop-color="#2f3238"/>
+    <stop offset=".6" stop-color="#17191d"/>
+    <stop offset="1" stop-color="#0b0c0e"/>
+  </radialGradient>
+  <radialGradient id="shadow" cx=".5" cy=".5" r=".5">
+    <stop offset="0" stop-color="#000" stop-opacity=".28"/>
+    <stop offset="1" stop-color="#000" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="sparkle" cx=".5" cy=".5" r=".5">
+    <stop offset="0" stop-color="#fff" stop-opacity="1"/>
+    <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+    <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000" flood-opacity=".22"/>
+  </filter>
+</defs>
+<rect width='800' height='800' fill='url(#bgLight)'/><ellipse cx="400.0" cy="620.0" rx="260.0" ry="26.0" fill="url(#shadow)"/><ellipse cx="400.0" cy="470.0" rx="190.0" ry="70.0" fill="none" stroke="url(#silverDark)" stroke-width="30.0"/><path d="M210.0 470.0 A190.0 70.0 0 0 0 590.0 470.0" fill="none" stroke="url(#silver)" stroke-width="30.0" stroke-linecap="round"/><path d="M225.2 494.5 A190.0 70.0 0 0 0 457.0 538.6" fill="none" stroke="#fff" stroke-opacity=".75" stroke-width="5.4" stroke-linecap="round"/><path d="M330.0 406.0 L358.0 322.0 L442.0 322.0 L470.0 406.0 Z" fill="url(#silverV)" stroke="#7d8490" stroke-width="2"/><polygon points="315.0,277.6 485.0,277.6 400.0,383.0" fill="url(#gem)"/><polygon points="353.2,230.0 446.8,230.0 485.0,277.6 315.0,277.6" fill="#f4f9ff"/><g stroke="#9fb3c9" stroke-width="1.4" stroke-opacity=".8"><line x1="357.5" y1="277.6" x2="400.0" y2="383.0"/><line x1="400.0" y1="277.6" x2="400.0" y2="383.0"/><line x1="442.5" y1="277.6" x2="400.0" y2="383.0"/><line x1="353.2" y1="230.0" x2="300.8" y2="277.6"/><line x1="384.4" y1="230.0" x2="357.5" y2="277.6"/><line x1="415.6" y1="230.0" x2="414.2" y2="277.6"/><line x1="446.8" y1="230.0" x2="470.8" y2="277.6"/></g><polygon points="353.2,230.0 446.8,230.0 485.0,277.6 315.0,277.6" fill="none" stroke="#c6d4e3" stroke-width="1.5"/><path d="M328.0 320.0 L322.2 240.0" stroke="url(#silverV)" stroke-width="9.0" stroke-linecap="round"/><path d="M374.0 320.0 L371.9 240.0" stroke="url(#silverV)" stroke-width="9.0" stroke-linecap="round"/><path d="M426.0 320.0 L428.1 240.0" stroke="url(#silverV)" stroke-width="9.0" stroke-linecap="round"/><path d="M472.0 320.0 L477.8 240.0" stroke="url(#silverV)" stroke-width="9.0" stroke-linecap="round"/><g transform="translate(352.0 250.0)" opacity=".95"><circle r="14.3" fill="url(#sparkle)"/><path d="M0 -26.0 L3.12 -3.12 L26.0 0 L3.12 3.12 L0 26.0 L-3.12 3.12 L-26.0 0 L-3.12 -3.12Z" fill="#fff"/></g><g transform="translate(550.0 430.0)" opacity=".95"><circle r="7.7" fill="url(#sparkle)"/><path d="M0 -14.0 L1.68 -1.68 L14.0 0 L1.68 1.68 L0 14.0 L-1.68 1.68 L-14.0 0 L-1.68 -1.68Z" fill="#fff"/></g></svg>
